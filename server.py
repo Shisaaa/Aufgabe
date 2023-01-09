@@ -1,3 +1,5 @@
+from http import server
+
 try:
     import grpc
     from concurrent import futures
@@ -5,6 +7,7 @@ try:
     import emoji
     import emoji_pb2          #This are File GRPC Generated for me
     import emoji_pb2_grpc     #This are File GRPC Generated for me
+
 except Exception as e :
     print("error loading modules")
 
@@ -25,5 +28,7 @@ try:
     while True:
         time.sleep(_ONE_DAY_IN_SECONDS)
 except  KeyboardInterrupt:
-    server.stop(0)
+ server.stop(0)
 
+ if __name__ =='__main__':
+     run()
